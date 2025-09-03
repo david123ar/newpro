@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-const EXTERNAL_DATA_URL = "https://henpro.vercel.app";
+const EXTERNAL_DATA_URL = "https://henpro.fun";
 
 // Fetch all IDs for dynamic URLs
 async function fetchAllIds() {

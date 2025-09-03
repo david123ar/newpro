@@ -20,22 +20,21 @@ const Footer = () => {
               Watch Hentai online at hen<span className="col-imp">pro</span>
             </div>
             <div className="line-inn">
-              In hen<span className="col-imp">pro</span> you will find a
-              hentai haven for the latest uncensored Hentai. We offer the best
-              hentai collection in the highest possible quality at 1080p from
-              Blu-Ray rips. Many videos are licensed direct downloads from the
-              original animators, producers, or publishing source company in
-              Japan.
+              In hen<span className="col-imp">pro</span> you will find a hentai
+              haven for the latest uncensored Hentai. We offer the best hentai
+              collection in the highest possible quality at 1080p from Blu-Ray
+              rips. Many videos are licensed direct downloads from the original
+              animators, producers, or publishing source company in Japan.
             </div>
             <div className="line-inn">
               If you're looking for the latest Hentai videos of various genres,
-              hen<span className="col-imp">pro</span> is exactly what you
-              need. Our website is an international hub of Hentai animation.
-              Here you will find a great collection of uncensored Hentai videos
-              as well as links to sex games and porn. Browse our catalog to find
-              the most exciting and hot Hentai anime. We have both old-school
-              videos for real admirers and the latest Hentai episodes for those
-              who would like to stay up to date. We stream thousands of Hentai
+              hen<span className="col-imp">pro</span> is exactly what you need.
+              Our website is an international hub of Hentai animation. Here you
+              will find a great collection of uncensored Hentai videos as well
+              as links to sex games and porn. Browse our catalog to find the
+              most exciting and hot Hentai anime. We have both old-school videos
+              for real admirers and the latest Hentai episodes for those who
+              would like to stay up to date. We stream thousands of Hentai
               videos in HD quality that you can watch on your PC, tablet, and
               mobile phone.
             </div>
@@ -54,7 +53,7 @@ const Footer = () => {
               1080p HD quality
             </div>
             <div className="line-inn">
-              Connected to many leaks, hanime.tv is where you can watch hentai
+              Connected to many leaks, Henpro.tv is where you can watch hentai
               with just one click. Including hentai in and up to 2022, where is
               the latest hentai are archived and curated here. Here is the place
               where you can find the best hentai online 24/7. Enjoy hentai
@@ -92,20 +91,21 @@ const Footer = () => {
         <div className="foot">
           <div className="flx">
             <Image
-              src="https://static-assets-44d.pages.dev/images/logo-100.png"
+              src="/kisan.jpg"
               alt="logo"
-              width={100} // Specify the width of the image
-              height={100} // Specify the height of the image
+              width={100}
+              height={100}
+              className="kisan"
             />
           </div>
           <div className="headi">
             hen<span className="col-p">pro</span>
             <div className="copyright-text">
               <p>
-                Hanime does not store any files on our server; we only link to
+                Henpro does not store any files on our server; we only link to
                 the media which is hosted on 3rd party services.
               </p>
-              <p>&copy; Hanime All rights reserved.</p>
+              <p>&copy; Henpro All rights reserved.</p>
             </div>
           </div>
         </div>

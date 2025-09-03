@@ -1,26 +1,622 @@
+/* src/app/globals.css */
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 @import "tailwindcss";
+/* rgb(83, 255, 134) */
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --grey-dark: #343a40;
+  --odd-grey: #3e454d;
+  --dark: #242428;
+  --height-small: 400px;
+  --height-medium: 500px;
+  --height-large: 610px;
+  --light: #ffffff;
+  --theme: #fdbd73;
+  --random-colors: #ff5733, #33ff57, #5733ff, #ff33a8, #33a8ff, #a833ff, #ff33ff,
+    #33ffc2, #a8ff33, #ffc233;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #303030; /* Dark background to match the image */
+  color: #ffffff; /* White text for contrast */
+  font-family: "Nunito", sans-serif; /* Applying Nunito font */
+}
+
+.container {
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  text-align: center;
+  background-color: #141414; /* Matching the image background */
+}
+
+.heroImage {
+  width: 100%;
+  height: 400px; /* Fixed height for responsiveness */
+  object-fit: cover; /* Ensure the image covers the area */
+  margin-bottom: 20px;
+  position: relative; /* Allow positioning */
+  right: 0; /* Align the image to the right */
+}
+
+.dataContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dataItem {
+  background: #1f1f1f; /* Slightly lighter shade for data items */
+  padding: 20px;
+  margin: 10px 0;
+  width: 90%;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.data-container {
+  position: relative;
+}
+
+.hero-image {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(255, 255, 255);
+  font-size: 64px;
+  text-align: center;
+  z-index: 1;
+  font-weight: 100;
+  /* background-color: rgba(0, 0, 0, 0.5); Optional: add a semi-transparent background for better readability */
+  font-family: "Montserrat", sans-serif !important;
+  line-height: 72px;
+  font-style: normal;
+  padding: 1em;
+  border-radius: 10px;
+}
+
+.texto {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #8a8787;
+  font-size: 21px;
+  width: 620px;
+  text-align: center;
+  z-index: 1;
+  font-weight: 100;
+  /* background-color: rgba(0, 0, 0, 0.5); Optional: add a semi-transparent background for better readability */
+  font-family: "Montserrat", sans-serif !important;
+
+  font-style: normal;
+  padding: 1em;
+  border-radius: 10px;
+}
+
+.unlimi {
+  color: #fdbd73;
+}
+
+.dataItem div {
+  margin: 5px 0;
+  color: #b0b0b0; /* Light grey text for data items */
+}
+
+.site-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 43.5vh; /* Adjust as needed */
+  background-color: #141414;
+  margin: 0 auto;
+  padding: 20px;
+
+  z-index: 1; /* Ensure the container is above background elements */
+}
+
+/* Pseudo-element for gradient overlay */
+
+.site-image {
+  position: relative;
+  z-index: 2; /* Higher z-index for the image */
+}
+
+.imo {
+  height: 37.5vh;
+  display: flex;
+  align-items: end;
+  width: 25%;
+  margin-right: 70px;
+  justify-content: end;
+}
+
+.site-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.site-lines {
+  margin-left: 0; /* Adjust spacing between image and content */
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  height: 40vh;
+  overflow-y: scroll;
+
+  /* Firefox scrollbar customization */
+  scrollbar-width: thin;
+  scrollbar-color: #fdbd73 #2d2d2d;
+}
+.col-imp {
+  color: #fdbd73;
+}
+/* #ff5733 */
+/* WebKit scrollbar customization */
+.site-lines::-webkit-scrollbar {
+  width: 12px;
+}
+
+.site-lines::-webkit-scrollbar-track {
+  background: #2d2d2d;
+  border-radius: 10px;
+}
+
+.site-lines::-webkit-scrollbar-thumb {
+  background: #fdbd73;
+  border-radius: 10px;
+}
+
+.site-lines::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+
+.line-head {
+  font-size: 27px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: rgb(255, 255, 255);
+}
+.line-inn {
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  line-height: 30px;
+  color: rgba(182, 175, 175, 0.8);
+}
+/* Ensure container is positioned relatively */
+.site-details {
+  position: relative;
+}
+
+/* Gradient overlay */
+.site-details::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(31, 30, 30, 0.8),
+    rgba(31, 30, 30, 0) 25%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Site line positioned at the bottom with initial blur */
+.site-line {
+  position: absolute; /* Or fixed, depending on your layout */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px; /* Adjust the height as needed */
+  background: #333; /* Or any color you prefer */
+  z-index: 0;
+  filter: blur(10px); /* Initial blur effect */
+  transition: filter 0.3s ease; /* Smooth transition for blur effect */
+}
+@media screen and (max-width: 2700px) {
+  .site-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 37.5vh; /* Adjust as needed */
+    background-color: #141414;
+    margin: 0 auto;
+    padding: 20px;
+
+    z-index: 1; /* Ensure the container is above background elements */
+  }
+  .site-lines {
+    margin-left: -125px; /* Adjust spacing between image and content */
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    height: 24.5vh;
+    overflow-y: scroll;
+
+    /* Firefox scrollbar customization */
+    scrollbar-width: thin;
+    scrollbar-color: #fdbd73 #2d2d2d;
+  }
+  .imo {
+    width: 30%;
+    height: 37.5vh;
+  }
+}
+@media screen and (max-width: 1549px) {
+  .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+    font-size: 44px;
+    text-align: center;
+    z-index: 1;
+    font-weight: 100;
+    /* background-color: rgba(0, 0, 0, 0.5); Optional: add a semi-transparent background for better readability */
+    font-family: "Montserrat", sans-serif !important;
+    line-height: 48px;
+    font-style: normal;
+    padding: 1em;
+    border-radius: 10px;
+  }
+  .site-lines {
+    margin-left: -125px; /* Adjust spacing between image and content */
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    height: 24.5vh;
+    overflow-y: scroll;
+
+    /* Firefox scrollbar customization */
+    scrollbar-width: thin;
+    scrollbar-color: #fdbd73 #2d2d2d;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+    font-size: 34px;
+    text-align: center;
+    z-index: 1;
+    font-weight: 100;
+    /* background-color: rgba(0, 0, 0, 0.5); Optional: add a semi-transparent background for better readability */
+    font-family: "Montserrat", sans-serif !important;
+    line-height: 48px;
+    font-style: normal;
+    padding: 1em;
+    border-radius: 10px;
+  }
+  .hero-image {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    height: 700px; /* Set the desired height */
+    overflow: hidden;
+    background-image: url("https://static-assets.freeanimehentai.net/images/bg3d-1900.930.min.jpg");
+    background-size: 200%; /* This ensures the image is twice as wide */
+    background-position: right; /* This positions the light side within the container */
+  }
+
+  .imgol {
+    display: none; /* Hide the img element as the background image is used instead */
+  }
+
+  .texto {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #8a8787;
+    font-size: 19px;
+    width: 500px;
+    text-align: center;
+    z-index: 1;
+    font-weight: 100;
+    /* background-color: rgba(0, 0, 0, 0.5); Optional: add a semi-transparent background for better readability */
+    font-family: "Montserrat", sans-serif !important;
+
+    font-style: normal;
+    padding: 1em;
+    border-radius: 10px;
+  }
+  .imo {
+    width: 40%;
+    height: 37.5vh;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .site-lines {
+    margin-left: 25px; /* Adjust spacing between image and content */
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 24.5vh;
+    overflow-y: scroll;
+
+    /* Firefox scrollbar customization */
+    scrollbar-width: thin;
+    scrollbar-color: #fdbd73 #2d2d2d;
+  }
+  .site-image {
+    display: none;
+  }
+  .imo {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+    font-size: 27px;
+    text-align: center;
+    z-index: 1;
+    font-weight: 100;
+    /* background-color: rgba(0, 0, 0, 0.5); Optional: add a semi-transparent background for better readability */
+    font-family: "Montserrat", sans-serif !important;
+    line-height: 48px;
+    font-style: normal;
+    padding: 1em;
+    border-radius: 10px;
+  }
+  .texto {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #8a8787;
+    font-size: 19px;
+    width: 500px;
+    text-align: center;
+    z-index: 1;
+    font-weight: 100;
+    /* background-color: rgba(0, 0, 0, 0.5); Optional: add a semi-transparent background for better readability */
+    font-family: "Montserrat", sans-serif !important;
+
+    font-style: normal;
+    padding: 1em;
+    border-radius: 10px;
+  }
+  .hero-image {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    height: 550px; /* Set the desired height */
+    overflow: hidden;
+    background-image: url("https://static-assets.freeanimehentai.net/images/bg3d-1900.930.min.jpg");
+    background-size: 200%; /* This ensures the image is twice as wide */
+    background-position: right; /* This positions the light side within the container */
+  }
+  .line-head {
+    font-size: 24px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 30px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: rgb(255, 255, 255);
+  }
+  .line-inn {
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 30px;
+    color: rgba(182, 175, 175, 0.8);
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .text-overlay {
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    width: 400px;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    text-align: center;
+    z-index: 1;
+    font-weight: 100;
+    /* background-color: rgba(0, 0, 0, 0.5); Optional: add a semi-transparent background for better readability */
+    font-family: "Montserrat", sans-serif !important;
+    line-height: 34px;
+    font-style: normal;
+    padding: 1em;
+    border-radius: 10px;
+  }
+  .texto {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #8a8787;
+    font-size: 17px;
+    width: 400px;
+    text-align: center;
+    z-index: 1;
+    font-weight: 100;
+    /* background-color: rgba(0, 0, 0, 0.5); Optional: add a semi-transparent background for better readability */
+    font-family: "Montserrat", sans-serif !important;
+
+    font-style: normal;
+    padding: 1em;
+    border-radius: 10px;
+  }
+  .hero-image {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    height: 400px; /* Set the desired height */
+    overflow: hidden;
+    background-image: url("https://static-assets.freeanimehentai.net/images/bg3d-1900.930.min.jpg");
+    background-size: 200%; /* This ensures the image is twice as wide */
+    background-position: right; /* This positions the light side within the container */
+  }
+  .line-head {
+    font-size: 18px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 20px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: rgb(255, 255, 255);
+  }
+  .line-inn {
+    font-size: 13px;
+    font-weight: 500;
+    font-style: normal;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 20px;
+    color: rgba(182, 175, 175, 0.8);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .text-overlay {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    width: 400px;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+    text-align: center;
+    z-index: 1;
+    font-weight: 100;
+    /* background-color: rgba(0, 0, 0, 0.5); Optional: add a semi-transparent background for better readability */
+    font-family: "Montserrat", sans-serif !important;
+    line-height: 30px;
+    font-style: normal;
+    padding: 1em;
+    border-radius: 10px;
+  }
+  .texto {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #8a8787;
+    font-size: 17px;
+    width: 400px;
+    text-align: center;
+    z-index: 1;
+    font-weight: 100;
+    /* background-color: rgba(0, 0, 0, 0.5); Optional: add a semi-transparent background for better readability */
+    font-family: "Montserrat", sans-serif !important;
+
+    font-style: normal;
+    padding: 1em;
+    border-radius: 10px;
+  }
+  .hero-image {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    height: 350px; /* Set the desired height */
+    overflow: hidden;
+    background-image: url("https://static-assets.freeanimehentai.net/images/bg3d-1900.930.min.jpg");
+    background-size: 200%; /* This ensures the image is twice as wide */
+    background-position: right; /* This positions the light side within the container */
+  }
+}
+
+@media screen and (max-width: 386px) {
+  .text-overlay {
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    width: 300px;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    text-align: center;
+    z-index: 1;
+    font-weight: 100;
+    /* background-color: rgba(0, 0, 0, 0.5); Optional: add a semi-transparent background for better readability */
+    font-family: "Montserrat", sans-serif !important;
+    line-height: 26px;
+    font-style: normal;
+    padding: 1em;
+    border-radius: 10px;
+  }
+  .texto {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #8a8787;
+    font-size: 15px;
+    width: 300px;
+    text-align: center;
+    z-index: 1;
+    font-weight: 100;
+    /* background-color: rgba(0, 0, 0, 0.5); Optional: add a semi-transparent background for better readability */
+    font-family: "Montserrat", sans-serif !important;
+
+    font-style: normal;
+    padding: 1em;
+    border-radius: 10px;
+  }
+  .hero-image {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    height: 400px; /* Set the desired height */
+    overflow: hidden;
+    background-image: url("https://static-assets.freeanimehentai.net/images/bg3d-1900.930.min.jpg");
+    background-size: 300%; /* This ensures the image is twice as wide */
+    background-position: right; /* This positions the light side within the container */
+  }
 }

@@ -1,0 +1,270 @@
+/* Wrapper for the entire section */
+.rending-section-wrapper {
+  padding: 40px; /* Padding around the section */
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/* Heading styling */
+.trhh {
+  margin-bottom: 20px; /* Spacing below the heading */
+  font-size: 24px; /* Adjust font size if needed */
+  font-weight: 700; /* Bold font */
+  color: white; /* Text color */
+}
+.headd {
+  display: flex;
+  align-items: center;
+  width: 95%;
+}
+.trh {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 50%;
+}
+.all {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: end;
+}
+.righto {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 50%;
+}
+.traa {
+  font-size: 18px;
+  padding: 5px 20px;
+  margin-bottom: 20px;
+  border-radius: 7px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+.traa:hover {
+  color: var(--theme);
+  cursor: pointer;
+  border: 1px solid var(--theme);
+}
+/* Swiper container styling */
+.trending-swiper {
+  padding-left: 0; /* Remove default padding */
+}
+
+/* Individual slide styling */
+.trending-slide {
+  position: relative; /* Required for absolute positioning of child elements */
+  height: fit-content; /* Height of each slide */
+  color: white; /* Text color */
+  display: flex; /* Flexbox for layout */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+}
+
+/* Content inside the slide */
+.trending-slide-content {
+  height: 100%; /* Full height of the slide */
+  display: flex; /* Flexbox for layout */
+  flex-direction: column; /* Stack content vertically */ /* Space out content */
+  width: 100%; /* Full width of the slide */
+}
+
+/* Image styling */
+.trending-slide-img {
+  width: 100%; /* Full width of the container */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 200px; /* Adjust max-width */
+  max-height: 275px; /* Adjust max-height */
+  object-fit: cover; /* Cover the container while maintaining aspect ratio */
+}
+
+/* Details section below the image */
+.trending-slide-details {
+  display: flex; /* Flexbox for layout */
+  flex-direction: column; /* Stack content vertically */
+
+  align-items: center; /* Center items horizontally */
+  margin-top: 10px; /* Spacing above */
+}
+
+/* Title styling */
+.trending-slide-title {
+  font-size: 14px; /* Adjust font size */
+  font-weight: 600; /* Bold font */
+  color: white; /* Text color */
+  text-align: center; /* Center text */
+  display: flex;
+  align-items: center;
+}
+
+/* Rank styling */
+.trending-slide-rank {
+  font-size: 13px; /* Adjust font size */
+  color: #ada5a5; /* Theme color */
+  text-align: center; /* Center text */
+}
+
+/* Sidebar for additional information */
+.trending-item-sidebar {
+  position: absolute; /* Absolute positioning within the slide */
+  top: 0; /* Align to the top */
+  bottom: 0; /* Align to the bottom */
+  left: 0; /* Align to the left */
+  width: 40px; /* Width of the sidebar */
+  display: flex; /* Flexbox for layout */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  gap: 50px; /* Spacing between items */
+}
+
+/* Style for the rank text */
+.trending-item-sidebar p {
+  transform: rotate(270deg); /* Rotate the text */
+  white-space: nowrap; /* Prevent text wrapping */
+  font-size: 17px; /* Font size for the rank */
+  width: 100px; /* Width of the rank container */
+  text-align: center; /* Center text horizontally */
+}
+
+/* Style for the rating */
+.trending-item-sidebar span {
+  color: var(--theme); /* Theme color for the rating */
+  font-family: "Poppins", sans-serif; /* Font family */
+  font-size: 18px; /* Font size for the rating */
+  font-weight: 600; /* Font weight */
+}
+.navitr {
+  height: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+}
+/* Navigation controls styling */
+.trending-swiper-navigation {
+  display: flex; /* Flexbox for layout */
+  flex-direction: column; /* Stack buttons vertically */
+  height: 100%; /* Full height of the container */
+  align-items: start; /* Center items horizontally */
+  justify-content: start; /* Center items vertically */
+  padding: 10px;
+  /* Background color */
+  z-index: 4; /* Ensure it's above other elements */
+  gap: 10px; /* Spacing between buttons */
+}
+
+/* Styling for the navigation buttons */
+.swiper-controls {
+  background: none; /* Semi-transparent background */
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  padding: 50px 10px; /* Padding inside the button */
+  border-radius: 7px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  user-select: none; /* Prevent text selection */
+  color: #fff; /* Button color */
+  display: flex; /* Flexbox for alignment */
+  align-items: center; /* Center icon vertically */
+  justify-content: center; /* Center icon horizontally */
+  transition: background 0.3s; /* Smooth background transition */
+}
+
+/* Hover state for the buttons */
+.swiper-controls:hover {
+  color: var(--theme); /* Background color on hover */
+  border: 1px solid var(--theme);
+}
+
+.tendi {
+  width: 100%;
+  display: flex;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 650px) {
+  .rending-section-wrapper {
+    padding-right: 10px;
+    padding-left: 10px; /* Remove padding for smaller screens */
+  }
+
+  .trending-item-sidebar {
+    display: none; /* Hide sidebar for smaller screens */
+  }
+
+  .trending-swiper-navigation {
+    display: none; /* Hide navigation for smaller screens */
+  }
+  .trhh {
+    margin-bottom: 20px; /* Spacing below the heading */
+    font-size: 18px; /* Adjust font size if needed */
+    font-weight: 500; /* Bold font */
+    color: white; /* Text color */
+  }
+  .swiper-controls {
+    background: none; /* Semi-transparent background */
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    padding: 5px 10px; /* Padding inside the button */
+    font-size: 12px;
+    border-radius: 7px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    user-select: none; /* Prevent text selection */
+    color: #fff; /* Button color */
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center icon vertically */
+    justify-content: center; /* Center icon horizontally */
+    transition: background 0.3s; /* Smooth background transition */
+  }
+  .traa {
+    font-size: 15px;
+    padding: 2px 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+  }
+  /* Navigation controls styling */
+  .trendi-swiper-navigation {
+    display: flex; /* Flexbox for layout */
+    /* Stack buttons vertically */
+    height: 100%; /* Full height of the container */
+    align-items: start; /* Center items horizontally */
+    justify-content: start; /* Center items vertically */
+    padding: 10px;
+    padding-bottom: 20px;
+    /* Background color */
+    z-index: 4; /* Ensure it's above other elements */
+    gap: 10px; /* Spacing between buttons */
+  }
+
+  .headd {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  .all {
+    display: flex;
+    width: 5%;
+    align-items: center;
+  }
+  .righto {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 50%;
+  }
+    /* Title styling */
+    .trending-slide-title {
+      font-size: 13px; /* Adjust font size */
+      font-weight: 500; /* Bold font */
+      color: white; /* Text color */
+      text-align: center; /* Center text */
+      display: flex;
+      align-items: center;
+    }
+  
+    /* Rank styling */
+    .trending-slide-rank {
+      font-size: 12px; /* Adjust font size */
+      color: #ada5a5; /* Theme color */
+      text-align: center; /* Center text */
+    }
+}

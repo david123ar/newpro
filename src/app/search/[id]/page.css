@@ -1,0 +1,157 @@
+.page-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin-top: 100px;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; /* Space between pagination and grid */
+  }
+  
+  .pagination-items {
+    display: flex;
+  }
+  
+  .pagination-item {
+    padding: 10px 15px;
+    margin: 0 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .pagination-item:hover {
+    background-color: #666666;
+  }
+  
+  .pagination-next {
+    margin-left: 10px;
+    padding: 10px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #474747;
+    color: #ffffff;
+    font-size: 24px;
+  }
+  
+  .pagination-next:hover {
+    background: #666666;
+  }
+  
+  .animol {
+    width: 100%; /* Adjusted to avoid overflow */
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 images per row */
+    gap: 10px; /* Space between images */
+  }
+  
+  .anime-card {
+    background-color: #474747;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .anime-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .poster-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 120%; /* Adjust the height ratio */
+    overflow: hidden;
+  }
+  
+  .poster {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #474747, transparent);
+    z-index: 1;
+  }
+  
+  .below-poster {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 5px 0;
+  }
+  
+  .views {
+    font-size: 14px;
+    color: #cccccc;
+    margin: 0;
+  }
+  
+  .aligo {
+    background: var(--theme);
+    color: black;
+  }
+  
+  .aligo:hover {
+    background: var(--theme);
+    color: black;
+  }
+  
+  .pgino {
+    background-color: #474747;
+    color: #ffffff;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 1200px) {
+    .animol {
+      grid-template-columns: repeat(5, 1fr); /* 5 images per row */
+    }
+  }
+  
+  @media (max-width: 1000px) {
+    .animol {
+      grid-template-columns: repeat(4, 1fr); /* 4 images per row */
+    }
+  }
+  
+  @media (max-width: 800px) {
+    .animol {
+      grid-template-columns: repeat(3, 1fr); /* 3 images per row */
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .animol {
+      grid-template-columns: repeat(2, 1fr); /* 2 images per row */
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .animol {
+      grid-template-columns: 1fr; /* 1 image per row */
+    }
+  }
+  

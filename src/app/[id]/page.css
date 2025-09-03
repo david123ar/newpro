@@ -1,0 +1,323 @@
+.compli {
+  width: 100%;
+  overflow: hidden;
+}
+.ifro {
+  width: 100%;
+  height: 40vw;
+}
+.watc {
+  margin-top: 60px;
+  margin-left: 20px;
+  display: flex;
+}
+.lopi {
+  font-size: 14px;
+  color: rgb(160, 159, 159);
+}
+.titleD {
+  font-size: 17px;
+  font-weight: 500;
+}
+.viewD {
+  font-size: 16px;
+  color: grey;
+}
+.postCon {
+  width: 18%;
+}
+.posterD {
+  width: 200px;
+  height: auto;
+}
+.slab1 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  padding-bottom: 50px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid grey;
+  width: 70vw;
+}
+.slab2 {
+  display: flex;
+  flex-direction: column;
+  width: 70vw;
+  border-bottom: 1px solid grey;
+  margin-bottom: 20px;
+}
+.fourCon {
+  width: 70vw;
+  display: flex;
+}
+.fourA {
+  width: calc(70vw - 200px);
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.four1 {
+  width: 178%;
+  display: flex;
+}
+.four11 {
+  width: 50%;
+  display: flex;
+  align-items: start;
+}
+.four12 {
+  width: 50%;
+  display: flex;
+  align-items: end;
+}
+.four3 {
+  width: 100%;
+  display: flex;
+}
+.four31 {
+  width: 50%;
+  display: flex;
+  align-items: start;
+}
+.four32 {
+  width: 50%;
+  display: flex;
+  align-items: start;
+}
+.teamA {
+  color: rgb(117, 116, 116);
+  font-size: 15px;
+}
+.brando {
+  color: var(--theme);
+  font-size: 15px;
+}
+.brando:hover {
+  cursor: pointer;
+}
+.restInfo {
+  color: rgb(194, 188, 188);
+  font-size: 15px;
+}
+.cencored {
+  color: red;
+  padding: 5px 10px;
+  font-size: 15px;
+  border: 1px solid red;
+}
+.descSlab {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 20px;
+  background: rgb(59, 59, 59);
+}
+.tagG {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.tags {
+  padding: 5px 10px;
+  font-size: 14px;
+  color: rgb(194, 188, 188);
+  border: 1px solid rgb(194, 188, 188);
+}
+.tags:hover {
+  color: var(--theme);
+  border: 1px solid var(--theme);
+  cursor: pointer;
+}
+.desc1 {
+  font-size: 14px;
+  color: rgb(194, 188, 188);
+}
+.desc2 {
+  font-size: 14px;
+  color: rgb(194, 188, 188);
+}
+.alliu {
+  display: flex;
+  gap: 10px;
+}
+.fixed-size-container {
+  width: 200px; /* Set your desired width */
+  height: 150px; /* Set your desired height */
+  overflow: hidden; /* Hide any overflow */
+  position: relative; /* Positioning context for absolute child */
+}
+
+.fixed-size-img {
+  position: absolute; /* Position the image inside the container */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure image covers the container */
+}
+
+
+.kalu {
+  display: flex;
+  flex-direction: column;
+  width: 410px;
+  gap: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.titleo {
+  display: flex;
+  flex-wrap: wrap;
+}
+.iopu {
+  width: 210px;
+}
+@media (max-width: 1400px) {
+  .watc {
+    flex-direction: column;
+    margin: 10px;
+  }
+  .ifro {
+    width: 100%;
+    height: 60vw;
+    margin-right: 10px;
+  }
+  .slab1 {
+    width: 100%;
+    margin-right: 10px;
+  }
+  .slab2 {
+    width: 100%;
+    margin-right: 10px;
+  }
+  .fourCon {
+    width: 100%;
+    margin-right: 10px;
+  }
+  .fourA {
+    width: 100%;
+    margin-right: 10px;
+  }
+  .teamA {
+    margin-right: 10px;
+  }
+  .four1 {
+    width: 181%;
+    margin-right: 10px;
+  }
+  .descSlab {
+    width: 100%;
+    margin-right: 10px;
+  }
+}
+@media (max-width: 1200px) {
+  .four1 {
+    width: 175%;
+    margin-right: 20px;
+  }
+  .fourA {
+    width: 50%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .four1 {
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+  .four3 {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .postCon {
+    width: 250px;
+  }
+  .posterD {
+    width: 250px;
+    height: auto;
+  }
+  .teamA {
+    display: flex;
+    font-size: 14px;
+  }
+  .restInfo {
+    display: flex;
+    font-size: 14px;
+  }
+}
+@media (max-width: 460px) {
+  .postCon {
+    width: 230px;
+  }
+  .posterD {
+    width: 230px;
+    height: auto;
+  }
+  .four11 {
+    width: 100%;
+    display: flex;
+    align-items: start;
+  }
+  .four12 {
+    width: 100%;
+    display: flex;
+    align-items: end;
+  }
+  .four3 {
+    width: 100%;
+    display: flex;
+  }
+  .four31 {
+    width: 100%;
+    display: flex;
+    align-items: start;
+  }
+  .four32 {
+    width: 100%;
+    display: flex;
+    align-items: start;
+  }
+  .fixed-size-container {
+    width: 150px; /* Set your desired width */
+    height: 100px; /* Set your desired height */
+    overflow: hidden; /* Hide any overflow */
+    position: relative; /* Positioning context for absolute child */
+  }
+  
+  .fixed-size-img {
+    position: absolute; /* Position the image inside the container */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure image covers the container */
+  }
+  
+  
+  .kalu {
+    display: flex;
+    flex-direction: column;
+    width: 310px;
+    gap: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .titleo {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 14px;
+  }
+  .iopu {
+    width: 150px;
+
+  }
+  .tags {
+    padding: 2px 5px;
+    font-size: 13px;
+    color: rgb(194, 188, 188);
+    border: 1px solid rgb(194, 188, 188);
+  }
+}

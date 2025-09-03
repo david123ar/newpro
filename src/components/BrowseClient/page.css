@@ -1,0 +1,624 @@
+.comp-brow {
+  margin-top: 70px;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.imagino {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.imagino2 {
+  display: none;
+}
+.image-contai {
+  position: relative;
+  display: inline-block;
+  width: 18vw;
+  height: 40vw;
+  overflow: hidden; /* Hide any overflow */
+}
+
+.categi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heff {
+  font-size: 40px;
+  font-weight: 600;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.categis {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 85vw;
+  gap: 10px; /* Add gap between images */
+  flex-wrap: wrap;
+}
+
+.belowJ {
+  height: 50px;
+  width: 100%;
+}
+
+.imagi {
+  position: relative;
+  display: inline-block;
+  width: 250px;
+  margin: 5px; /* Add margin around each image */
+  height: 400px;
+  overflow: hidden;
+}
+
+.imagi img {
+  width: 100%; /* Adjust the width of the image */
+  height: 60%; /* Make the image fill the container's height */
+  object-fit: cover; /* Ensure the image covers the entire container */
+  object-position: top; /* Align the image to start from the top */
+  transition: transform 0.3s ease; /* Add transition for smooth scaling */
+}
+
+.belowJ {
+  height: 30%;
+  width: 100%;
+  background-color: #474747;
+}
+
+.imagi:hover {
+  transform: scale(1.1); /* Scale the image up slightly on hover */
+  cursor: pointer;
+}
+
+.image-contai img {
+  width: 100%; /* Adjust the width of the image */
+  height: 100%; /* Make the image fill the container's height */
+  object-fit: cover; /* Ensure the image covers the entire container */
+  object-position: top; /* Align the image to start from the top */
+  transition: transform 0.3s ease; /* Add transition for smooth scaling */
+}
+
+.image-contai:hover img {
+  transform: scale(1.1); /* Scale the image up slightly on hover */
+  cursor: pointer;
+}
+
+.image-contai::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to top, #1b1b1b, transparent);
+  z-index: 1; /* Ensure the gradient is above the image */
+}
+
+.imagi::before {
+  content: "";
+  position: absolute;
+  bottom: 40%; /* Start the gradient from the top of the image */
+  left: 0;
+  width: 100%;
+  height: 20%; /* Gradient height matches the image height */
+  background: linear-gradient(
+    to top,
+    #474747,
+    transparent
+  ); /* Gradient from #303030 to transparent */
+  z-index: 1; /* Ensure the gradient is above the image */
+  pointer-events: none; /* Prevent the pseudo-element from blocking interactions */
+}
+
+.text-overl {
+  position: absolute;
+  top: 50%; /* Position the text in the middle vertically */
+  left: 50%; /* Position the text in the middle horizontally */
+  transform: translate(-50%, -50%); /* Center the text */
+  color: white; /* Text color */
+  /* Background color with transparency */
+  padding: 10px; /* Padding around the text */
+  font-size: 27px; /* Font size */
+  font-weight: 800;
+  text-align: center; /* Center the text */
+  z-index: 2; /* Ensure the text is above the gradient */
+}
+
+.text-ovel-top img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%; /* Make the image round */
+  border: 1px solid #474747;
+  object-fit: cover; /* Ensure the image covers the entire area */
+  display: block; /* Ensure no extra space around the image */
+  margin: 0 auto; /* Center the image horizontally */
+}
+
+.text-ovel-top {
+  position: absolute;
+  top: 30%; /* Position the text in the middle vertically */
+  left: 5%; /* Position the text in the middle horizontally */
+  color: white;
+  padding: 10px;
+  font-size: 27px;
+  overflow: hidden;
+  text-align: center;
+  z-index: 2;
+}
+
+.text-ovel-sec {
+  position: absolute;
+  top: 50%; /* Position the text in the middle vertically */
+  left: 5%; /* Position the text in the middle horizontally */
+
+  color: white; /* Text color */
+  /* Background color with transparency */
+  padding: 10px; /* Padding around the text */
+  font-size: 20px; /* Font size */
+  font-weight: 600;
+  text-align: center; /* Center the text */
+  z-index: 2; /* Ensure the text is above the gradient */
+}
+
+.text-ovel-thi {
+  position: absolute;
+  top: 60%; /* Position the text at 60% from the top of the container */
+  left: 5%; /* Position the text 5% from the left edge */
+  color: var(--theme); /* Dynamic text color based on your theme variable */
+  padding: 10px; /* Add padding around the text */
+  font-size: 13px; /* Set the font size */
+  text-align: start; /* Align text to the start (left) */
+  z-index: 2; /* Ensure the text is layered above the background */
+  width: 90%; /* Ensure the text fits within the container */
+  height: 70px; /* Fixed height for scrollable content */
+  overflow-y: auto; /* Enable vertical scrolling */
+  box-sizing: border-box; /* Include padding within the width */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Optional: semi-transparent background */
+  border-radius: 5px; /* Optional: rounded corners */
+}
+
+/* Custom Scrollbar Styling */
+.text-ovel-thi::-webkit-scrollbar {
+  width: 8px; /* Set the width of the scrollbar */
+}
+
+.text-ovel-thi::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1); /* Track color */
+  border-radius: 5px; /* Optional: rounded corners for the track */
+}
+
+.text-ovel-thi::-webkit-scrollbar-thumb {
+  background-color: var(--theme); /* Scrollbar thumb color */
+  border-radius: 5px; /* Rounded corners for the scrollbar thumb */
+  border: 2px solid transparent; /* Optional: border around the thumb */
+  background-clip: content-box; /* Optional: adjust how the background fits */
+}
+
+.text-ovel-thi::-webkit-scrollbar-thumb:hover {
+  background-color: darken(var(--theme), 10%); /* Darken thumb on hover */
+}
+
+.text-ovel-bott {
+  position: absolute;
+  top: 80%; /* Position the text in the middle vertically */
+  left: 5%; /* Position the text in the middle horizontally */
+  color: rgb(189, 187, 187); /* Text color */
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  /* Background color with transparency */
+  padding: 10px; /* Padding around the text */
+  font-size: 18px; /* Font size */
+  text-align: center; /* Center the text */
+  z-index: 2; /* Ensure the text is above the gradient */
+}
+
+.text-overl-top {
+  top: 70%; /* Adjust this value to position the top text */
+  font-size: 70px;
+}
+
+.text-overl-bottom {
+  top: 83%; /* Adjust this value to position the bottom text */
+}
+
+.text-overl-triam {
+  top: 90%; /* Adjust this value to position the bottom text */
+  font-size: 14px;
+  color: #adabab;
+}
+
+.text-ovl-top img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* Make the image round */
+  border: 1px solid #6e6c6c;
+  object-fit: cover; /* Ensure the image covers the entire area */
+  display: block; /* Ensure no extra space around the image */
+  margin: 0 auto; /* Center the image horizontally */
+}
+
+.texy {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.titop {
+  font-size: 20px;
+  font-weight: 600;
+}
+.vdo {
+  font-size: 18px;
+  margin-left: 10px;
+  display: flex;
+  color: rgb(189, 187, 187);
+  align-items: center;
+  gap: 5px;
+}
+
+.miniCards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 85vw;
+  gap: 10px; /* Add gap between images */
+  flex-wrap: wrap;
+}
+
+.miniCard {
+  padding: 10px 20px;
+  background: #474747;
+}
+.miniCard:hover {
+  transform: scale(1.1); /* Scale the image up slightly on hover */
+  cursor: pointer;
+}
+
+.fino {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 85vw;
+  gap: 10px; /* Add gap between images */
+  flex-wrap: wrap;
+}
+
+.finalep {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  background: #242323;
+}
+.finaltiti {
+  font-size: 15px;
+  font-weight: 500;
+}
+.finalvdo {
+  color: var(--theme);
+  font-size: 15px;
+}
+.finalep:hover {
+  background: #494848;
+  cursor: pointer;
+}
+
+/* ADS */
+.bio-ad {
+  width: 100%;
+  max-width: 100%;
+  height: 90px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.bio-ad.ad-top {
+  margin-bottom: 12px;
+}
+
+.bio-ad.ad-bottom {
+  margin-top: 20px;
+}
+
+.bio-ad iframe {
+  width: 100%;
+  height: 90px;
+  border: none;
+}
+@media (max-width: 1500px) {
+  .text-overl-top {
+    top: 70%; /* Adjust this value to position the top text */
+    font-size: 65px;
+  }
+  .text-overl-bottom {
+    top: 83%; /* Adjust this value to position the bottom text */
+    font-size: 20px;
+  }
+
+  .text-overl-triam {
+    top: 90%; /* Adjust this value to position the bottom text */
+    font-size: 14px;
+    color: #adabab;
+    width: 80%;
+  }
+}
+@media (max-width: 1100px) {
+  .text-overl-top {
+    top: 60%; /* Adjust this value to position the top text */
+    font-size: 60px;
+  }
+  .text-overl-bottom {
+    top: 76%; /* Adjust this value to position the bottom text */
+    font-size: 20px;
+  }
+
+  .text-overl-triam {
+    top: 90%; /* Adjust this value to position the bottom text */
+    font-size: 14px;
+    color: #adabab;
+    width: 80%;
+  }
+}
+
+@media (max-width: 900px) {
+  .text-overl-top {
+    top: 60%; /* Adjust this value to position the top text */
+    font-size: 60px;
+  }
+  .text-overl-bottom {
+    top: 76%; /* Adjust this value to position the bottom text */
+    font-size: 20px;
+  }
+
+  .text-overl-triam {
+    top: 90%; /* Adjust this value to position the bottom text */
+    font-size: 14px;
+    color: #adabab;
+    width: 80%;
+  }
+  .imagino {
+    display: none;
+  }
+  .imagino2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .image-contai1 {
+    position: relative;
+    display: inline-block;
+    width: 50vw;
+    height: 60vw;
+    overflow: hidden; /* Hide any overflow */
+  }
+  .image-contai2 {
+    position: relative;
+    display: inline-block;
+    width: 50vw;
+    height: 60vw;
+    overflow: hidden; /* Hide any overflow */
+  }
+  .image-contai3 {
+    position: relative;
+    display: inline-block;
+    width: 50vw;
+    height: 60vw;
+    overflow: hidden; /* Hide any overflow */
+  }
+  .image-contai4 {
+    position: relative;
+    display: inline-block;
+    width: 50vw;
+    height: 60vw;
+    overflow: hidden; /* Hide any overflow */
+  }
+  .image-contai1 img {
+    width: 100%; /* Adjust the width of the image */
+    height: 100%; /* Make the image fill the container's height */
+    object-fit: cover; /* Ensure the image covers the entire container */
+    object-position: top; /* Align the image to start from the top */
+    transition: transform 0.3s ease; /* Add transition for smooth scaling */
+  }
+
+  .image-contai1:hover img {
+    transform: scale(1.1); /* Scale the image up slightly on hover */
+    cursor: pointer;
+  }
+
+  .image-contai1::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to top, #1b1b1b, transparent);
+    z-index: 1; /* Ensure the gradient is above the image */
+  }
+  .image-contai2 img {
+    width: 100%; /* Adjust the width of the image */
+    height: 100%; /* Make the image fill the container's height */
+    object-fit: cover; /* Ensure the image covers the entire container */
+    object-position: top; /* Align the image to start from the top */
+    transition: transform 0.3s ease; /* Add transition for smooth scaling */
+  }
+
+  .image-contai2:hover img {
+    transform: scale(1.1); /* Scale the image up slightly on hover */
+    cursor: pointer;
+  }
+
+  .image-contai2::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to top, #1b1b1b, transparent);
+    z-index: 1; /* Ensure the gradient is above the image */
+  }
+  .image-contai3 img {
+    width: 100%; /* Adjust the width of the image */
+    height: 100%; /* Make the image fill the container's height */
+    object-fit: cover; /* Ensure the image covers the entire container */
+    object-position: top; /* Align the image to start from the top */
+    transition: transform 0.3s ease; /* Add transition for smooth scaling */
+  }
+
+  .image-contai3:hover img {
+    transform: scale(1.1); /* Scale the image up slightly on hover */
+    cursor: pointer;
+  }
+
+  .image-contai3::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to top, #1b1b1b, transparent);
+    z-index: 1; /* Ensure the gradient is above the image */
+  }
+  .image-contai4 img {
+    width: 100%; /* Adjust the width of the image */
+    height: 100%; /* Make the image fill the container's height */
+    object-fit: cover; /* Ensure the image covers the entire container */
+    object-position: top; /* Align the image to start from the top */
+    transition: transform 0.3s ease; /* Add transition for smooth scaling */
+  }
+
+  .image-contai4:hover img {
+    transform: scale(1.1); /* Scale the image up slightly on hover */
+    cursor: pointer;
+  }
+
+  .image-contai4::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to top, #1b1b1b, transparent);
+    z-index: 1; /* Ensure the gradient is above the image */
+  }
+  .categis {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    gap: 10px; /* Add gap between images */
+    flex-wrap: wrap;
+  }
+  .miniCards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    gap: 10px; /* Add gap between images */
+    flex-wrap: wrap;
+  }
+
+  .miniCard {
+    padding: 5px 10px;
+    background: #474747;
+  }
+  .heff {
+    font-size: 30px;
+    margin-left: 10px;
+  }
+}
+@media (max-width: 530px) {
+  .text-overl-top {
+    top: 60%; /* Adjust this value to position the top text */
+    font-size: 40px;
+  }
+  .text-overl-bottom {
+    top: 76%; /* Adjust this value to position the bottom text */
+    font-size: 16px;
+  }
+
+  .text-overl-triam {
+    top: 90%; /* Adjust this value to position the bottom text */
+    font-size: 13px;
+    color: #adabab;
+    width: 80%;
+  }
+  .image-contai1 {
+    position: relative;
+    display: inline-block;
+    width: 50vw;
+    height: 65vw;
+    overflow: hidden; /* Hide any overflow */
+  }
+  .image-contai2 {
+    position: relative;
+    display: inline-block;
+    width: 50vw;
+    height: 65vw;
+    overflow: hidden; /* Hide any overflow */
+  }
+  .image-contai3 {
+    position: relative;
+    display: inline-block;
+    width: 50vw;
+    height: 65vw;
+    overflow: hidden; /* Hide any overflow */
+  }
+  .image-contai4 {
+    position: relative;
+    display: inline-block;
+    width: 50vw;
+    height: 65vw;
+    overflow: hidden; /* Hide any overflow */
+  }
+  .imagi {
+    position: relative;
+    display: inline-block;
+    width: 400px;
+    margin: 5px; /* Add margin around each image */
+    height: 500px;
+    overflow: hidden;
+  }
+  .fino {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    gap: 10px; /* Add gap between images */
+    flex-wrap: wrap;
+  }
+
+  .finalep {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 10px;
+    background: #242323;
+  }
+  .heff {
+    font-size: 20px;
+    margin-left: 10px;
+  }
+}

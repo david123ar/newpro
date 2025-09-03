@@ -1,103 +1,105 @@
-import Image from "next/image";
+export const dynamic = "force-dynamic";
 
-export default function Home() {
+import React from "react";
+import HomeClient from "@/components/HomeClient/HomeClient";
+import { connectDB } from "@/lib/mongoClient";
+
+export const metadata = {
+  title: "Watch Free HD Hentai & Anime Videos - henpro",
+  description: `Enjoy your unlimited hentai & anime collection. We are the definitive source for the best curated 720p / 1080p HD hentai videos, viewable by mobile phone and tablet, for free.`,
+};
+
+export default async function Page({ searchParams }) {
+  const db = await connectDB();
+  const searchParam = await searchParams
+  const username = searchParam?.ref || "testing";
+
+  /** Get user */
+  const userDoc = await db.collection("users").findOne({ username });
+  const user = userDoc
+    ? {
+        id: userDoc._id.toString(),
+        email: userDoc.email,
+        username: userDoc.username,
+        avatar: userDoc.avatar,
+        bio: userDoc.bio || "",
+        referredBy: userDoc.referredBy || null,
+      }
+    : null;
+
+  /** Get publisher */
+  const publisherDoc = await db.collection("publishers").findOne({ _id: username });
+  const publisher = publisherDoc
+    ? {
+        id: publisherDoc._id,
+        email: publisherDoc.email,
+        username: publisherDoc.username || username,
+        adUnit: publisherDoc.adUnit,
+        joinedAt: publisherDoc.joinedAt,
+      }
+    : null;
+
+  /** Referred publisher */
+  let referredPublisher = null;
+  if (user?.referredBy) {
+    const referredDoc = await db.collection("publishers").findOne({ _id: user.referredBy });
+    if (referredDoc) {
+      referredPublisher = {
+        id: referredDoc._id,
+        username: referredDoc.username || user.referredBy,
+        email: referredDoc.email,
+        adUnit: referredDoc.adUnit,
+        joinedAt: referredDoc.joinedAt,
+      };
+    }
+  }
+
+  /** Links and design */
+  const linksDoc = await db.collection("links").findOne({ _id: username });
+  const links = linksDoc?.links || [];
+  const design = linksDoc?.design || "";
+
+  /** Fetch homepage data */
+  let json = { results: { data: { recent: [], trending: [], random: [] } } };
+  try {
+    const res = await fetch("https://hent.shoko.fun/api/hen-home", { cache: "no-store" });
+    json = await res.json();
+  } catch (error) {
+    console.error("Error fetching homepage data:", error);
+  }
+
+  /** Prepare slides */
+  const slides = (json.results.data.recent || []).map(i => ({
+    id: i.id,
+    title: i.title,
+    views: i.views,
+    image: i.poster,
+  }));
+
+  const slideo = (json.results.data.trending || []).map(i => ({
+    id: i.id,
+    title: i.title,
+    views: i.views,
+    image: i.poster,
+  }));
+
+  const slidel = (json.results.data.random || []).map(i => ({
+    id: i.id,
+    title: i.title,
+    views: i.views,
+    image: i.poster,
+  }));
+
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    <HomeClient
+      slides={slides}
+      slideo={slideo}
+      slidel={slidel}
+      user={user}
+      publisher={publisher}
+      referredPublisher={referredPublisher}
+      links={links}
+      design={design}
+    />
   );
 }

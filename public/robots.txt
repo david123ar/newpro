@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://henpro..fun/api/sitemap
+Sitemap: https://henpro.fun/api/sitemap

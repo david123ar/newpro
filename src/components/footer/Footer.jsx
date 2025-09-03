@@ -17,10 +17,10 @@ const Footer = () => {
           </div>
           <div className="site-lines">
             <div className="line-head">
-              Watch Hentai online at hen<span className="col-imp">pro</span>
+              Watch Hentai online at hanimetv<span className="col-imp">.</span>fun
             </div>
             <div className="line-inn">
-              In hen<span className="col-imp">pro</span> you will find a hentai
+              In hanimetv<span className="col-imp">.</span>fun you will find a hentai
               haven for the latest uncensored Hentai. We offer the best hentai
               collection in the highest possible quality at 1080p from Blu-Ray
               rips. Many videos are licensed direct downloads from the original
@@ -28,7 +28,7 @@ const Footer = () => {
             </div>
             <div className="line-inn">
               If you're looking for the latest Hentai videos of various genres,
-              hen<span className="col-imp">pro</span> is exactly what you need.
+              hanimetv<span className="col-imp">.</span>fun is exactly what you need.
               Our website is an international hub of Hentai animation. Here you
               will find a great collection of uncensored Hentai videos as well
               as links to sex games and porn. Browse our catalog to find the
@@ -39,7 +39,7 @@ const Footer = () => {
               mobile phone.
             </div>
             <div className="line-inn">
-              With hen<span className="col-imp">pro</span>, you can watch the
+              With hanimetv<span className="col-imp">.</span>fun, you can watch the
               newest Hentai series and follow your favorite characters. Whether
               you like a raw fap material or a well-developed plot, we have got
               you covered. Here, you can find Hentai that focuses on the
@@ -53,7 +53,7 @@ const Footer = () => {
               1080p HD quality
             </div>
             <div className="line-inn">
-              Connected to many leaks, Henpro.tv is where you can watch hentai
+              Connected to many leaks, Hanimetv.fun, is where you can watch hentai
               with just one click. Including hentai in and up to 2022, where is
               the latest hentai are archived and curated here. Here is the place
               where you can find the best hentai online 24/7. Enjoy hentai
@@ -69,7 +69,7 @@ const Footer = () => {
               <span className="col-imp">Yuri Hentai</span>, and much more!
             </div>
             <div className="line-head">
-              Join our hentai hen<span className="col-imp">pro</span> fans
+              Join our hentai hanimetv<span className="col-imp">.</span>fun fans
               community Discord
             </div>
             <div className="line-inn">
@@ -99,13 +99,13 @@ const Footer = () => {
             />
           </div>
           <div className="headi">
-            hen<span className="col-p">pro</span>
+            hanimetv<span className="col-p">.</span>fun
             <div className="copyright-text">
               <p>
-                Henpro does not store any files on our server; we only link to
+                Hanimetv does not store any files on our server; we only link to
                 the media which is hosted on 3rd party services.
               </p>
-              <p>&copy; Henpro All rights reserved.</p>
+              <p>&copy; Hanimetv All rights reserved.</p>
             </div>
           </div>
         </div>

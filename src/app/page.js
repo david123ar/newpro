@@ -5,7 +5,7 @@ import HomeClient from "@/components/HomeClient/HomeClient";
 import { connectDB } from "@/lib/mongoClient";
 
 export const metadata = {
-  title: "Watch Free HD Hentai & Anime Videos - henpro",
+  title: "Watch Free HD Hentai & Anime Videos - hanimetv",
   description: `Enjoy your unlimited hentai & anime collection. We are the definitive source for the best curated 720p / 1080p HD hentai videos, viewable by mobile phone and tablet, for free.`,
 };
 

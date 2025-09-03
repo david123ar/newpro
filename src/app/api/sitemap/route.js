@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-const EXTERNAL_DATA_URL = "https://henpro.fun";
+const EXTERNAL_DATA_URL = "https://hanimetv.fun";
 
 // Fetch all IDs for dynamic URLs
 async function fetchAllIds() {

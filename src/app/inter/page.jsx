@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Sponsored Page | Henpro",
+  title: "Sponsored Page | Hanimetv",
   description: "Please support Henpro by viewing this sponsored content.",
   robots: {
     index: false,

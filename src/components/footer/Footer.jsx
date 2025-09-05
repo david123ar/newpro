@@ -3,6 +3,7 @@ import "./footer.css";
 import Image from "next/image";
 
 const Footer = () => {
+  const siteName = process.env.NEXT_PUBLIC_SITE_NAME || "Henpro";
   return (
     <>
       <div className="margino">
@@ -17,49 +18,93 @@ const Footer = () => {
           </div>
           <div className="site-lines">
             <div className="line-head">
-              Watch Hentai online at hanimetv<span className="col-imp">.</span>fun
+              Watch Hentai online at{" "}
+              {siteName.includes("hen") ? (
+                <>
+                  {siteName.includes("hen") ? (
+                    <>
+                      hen<span className="col-imp">pro</span>
+                    </>
+                  ) : (
+                    <>
+                      hanime<span className="col-imp">tv</span>
+                    </>
+                  )}
+                </>
+              ) : (
+                <>
+                  hanime<span className="col-imp">tv</span>
+                </>
+              )}
             </div>
             <div className="line-inn">
-              In hanimetv<span className="col-imp">.</span>fun you will find a hentai
-              haven for the latest uncensored Hentai. We offer the best hentai
-              collection in the highest possible quality at 1080p from Blu-Ray
-              rips. Many videos are licensed direct downloads from the original
-              animators, producers, or publishing source company in Japan.
+              In{" "}
+              {siteName.includes("hen") ? (
+                <>
+                  hen<span className="col-imp">pro</span>
+                </>
+              ) : (
+                <>
+                  hanime<span className="col-imp">tv</span>
+                </>
+              )}{" "}
+              you will find a hentai haven for the latest uncensored Hentai. We
+              offer the best hentai collection in the highest possible quality
+              at 1080p from Blu-Ray rips. Many videos are licensed direct
+              downloads from the original animators, producers, or publishing
+              source company in Japan.
             </div>
             <div className="line-inn">
               If you're looking for the latest Hentai videos of various genres,
-              hanimetv<span className="col-imp">.</span>fun is exactly what you need.
-              Our website is an international hub of Hentai animation. Here you
-              will find a great collection of uncensored Hentai videos as well
-              as links to sex games and porn. Browse our catalog to find the
-              most exciting and hot Hentai anime. We have both old-school videos
-              for real admirers and the latest Hentai episodes for those who
-              would like to stay up to date. We stream thousands of Hentai
-              videos in HD quality that you can watch on your PC, tablet, and
-              mobile phone.
+              {siteName.includes("hen") ? (
+                <>
+                  hen<span className="col-imp">pro</span>
+                </>
+              ) : (
+                <>
+                  hanime<span className="col-imp">tv</span>
+                </>
+              )}{" "}
+              is exactly what you need. Our website is an international hub of
+              Hentai animation. Here you will find a great collection of
+              uncensored Hentai videos as well as links to sex games and porn.
+              Browse our catalog to find the most exciting and hot Hentai anime.
+              We have both old-school videos for real admirers and the latest
+              Hentai episodes for those who would like to stay up to date. We
+              stream thousands of Hentai videos in HD quality that you can watch
+              on your PC, tablet, and mobile phone.
             </div>
             <div className="line-inn">
-              With hanimetv<span className="col-imp">.</span>fun, you can watch the
-              newest Hentai series and follow your favorite characters. Whether
-              you like a raw fap material or a well-developed plot, we have got
-              you covered. Here, you can find Hentai that focuses on the
-              physical aspect of love as well as romance. We strive to provide
-              the best experience to all our clients, that is why you can always
-              click the “subbed” tag to follow the plot if you do not know
-              Japanese.
+              With{" "}
+              {siteName.includes("hen") ? (
+                <>
+                  hen<span className="col-imp">pro</span>
+                </>
+              ) : (
+                <>
+                  hanime<span className="col-imp">tv</span>
+                </>
+              )}
+              , you can watch the newest Hentai series and follow your favorite
+              characters. Whether you like a raw fap material or a
+              well-developed plot, we have got you covered. Here, you can find
+              Hentai that focuses on the physical aspect of love as well as
+              romance. We strive to provide the best experience to all our
+              clients, that is why you can always click the “subbed” tag to
+              follow the plot if you do not know Japanese.
             </div>
             <div className="line-head">
               I want to watch free uncensored anime hentai videos online in 720p
               1080p HD quality
             </div>
             <div className="line-inn">
-              Connected to many leaks, Hanimetv.fun, is where you can watch hentai
-              with just one click. Including hentai in and up to 2022, where is
-              the latest hentai are archived and curated here. Here is the place
-              where you can find the best hentai online 24/7. Enjoy hentai
-              movies, hentai clips, and also hentai pictures images for free!
-              This site is the best place for ecchi since hentai haven, and
-              includes many hentai categories like:{" "}
+              Connected to many leaks, {siteName}.fun is where you can watch
+              hentai with just one click. Including hentai in and up to 2022,
+              where is the latest hentai are archived and curated here. Here is
+              the place where you can find the best hentai online 24/7. Enjoy
+              hentai movies, hentai clips, and also hentai pictures images for
+              free! This site is the best place for ecchi since hentai haven,
+              and includes many hentai categories like:{" "}
               <span className="col-imp">Incest hentai</span>,{" "}
               <span className="col-imp">Milf hentai</span>,{" "}
               <span className="col-imp">Anal Hentai</span>,
@@ -69,8 +114,17 @@ const Footer = () => {
               <span className="col-imp">Yuri Hentai</span>, and much more!
             </div>
             <div className="line-head">
-              Join our hentai hanimetv<span className="col-imp">.</span>fun fans
-              community Discord
+              Join our hentai{" "}
+              {siteName.includes("hen") ? (
+                <>
+                  hen<span className="col-imp">pro</span>
+                </>
+              ) : (
+                <>
+                  hanime<span className="col-imp">tv</span>
+                </>
+              )}{" "}
+              fans community Discord
             </div>
             <div className="line-inn">
               Our fans' community Discord is 145,000+ members strong and
@@ -99,13 +153,13 @@ const Footer = () => {
             />
           </div>
           <div className="headi">
-            hanimetv<span className="col-p">.</span>fun
+            hen<span className="col-p">pro</span>
             <div className="copyright-text">
               <p>
-                Hanimetv does not store any files on our server; we only link to
-                the media which is hosted on 3rd party services.
+                {siteName} does not store any files on our server; we only link
+                to the media which is hosted on 3rd party services.
               </p>
-              <p>&copy; Hanimetv All rights reserved.</p>
+              <p>&copy; {siteName} All rights reserved.</p>
             </div>
           </div>
         </div>

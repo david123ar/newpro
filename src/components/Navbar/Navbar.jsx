@@ -78,6 +78,7 @@ export default function Navbar(props) {
       return () => window.removeEventListener("resize", handleResize);
     }
   }, []);
+  const siteName = process.env.NEXT_PUBLIC_SITE_NAME || "Henpro";
   return (
     <div>
       <>
@@ -96,7 +97,23 @@ export default function Navbar(props) {
               <Link href="/">
                 <div style={{ width: "auto", height: "40px" }}>
                   <div className="logo0">
-                    hen<div className="col-cls">pro</div>
+                    {siteName.includes("hen") ? (
+                      <>
+                        {siteName.includes("hen") ? (
+                          <>
+                            hen<span className="col-cls">pro</span>
+                          </>
+                        ) : (
+                          <>
+                            hanime<span className="col-cls">tv</span>
+                          </>
+                        )}
+                      </>
+                    ) : (
+                      <>
+                        hanime<span className="col-cls">tv</span>
+                      </>
+                    )}
                   </div>
                 </div>
               </Link>

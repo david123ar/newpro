@@ -4,16 +4,17 @@ import React from "react";
 import HomeClient from "@/components/HomeClient/HomeClient";
 import { connectDB } from "@/lib/mongoClient";
 
+const siteName = process.env.NEXT_PUBLIC_SITE_NAME || "Henpro";
+
 export const metadata = {
-  title: "Watch Free HD Hentai & Anime Videos - hanimetv",
+  title: `Watch Free HD Hentai & Anime Videos - ${siteName}`,
   description: `Enjoy your unlimited hentai & anime collection. We are the definitive source for the best curated 720p / 1080p HD hentai videos, viewable by mobile phone and tablet, for free.`,
 };
 
 export default async function Page({ searchParams }) {
   const db = await connectDB();
-  const searchParam = await searchParams
-  const username = searchParam?.ref || "testing";
- 
+  const username = searchParams?.ref || "testing";
+
   /** Get user */
   const userDoc = await db.collection("users").findOne({ username });
   const user = userDoc

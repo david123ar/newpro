@@ -32,6 +32,8 @@ export default function WatchPageClient({ data, datal, design, user }) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+    const siteName = process.env.NEXT_PUBLIC_SITE_NAME || "Henpro";
+
   return (
     <>
       {showAd && (
@@ -44,7 +46,7 @@ export default function WatchPageClient({ data, datal, design, user }) {
 
             {/* Support Text */}
             <div style={supportTextStyle}>
-              This ad supports <strong>Henpro</strong>
+              This ad supports <strong>{siteName}</strong>
             </div>
 
             <div

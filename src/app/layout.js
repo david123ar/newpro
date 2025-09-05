@@ -6,8 +6,10 @@ import Nav from "./Nav/page";
 
 const inter = Inter({ subsets: ["latin"] });
 
+const siteName = process.env.NEXT_PUBLIC_SITE_NAME || "Henpro";
+
 export const metadata = {
-  title: "Watch Free Hentai Video Streams Online in 720p , 1080p HD - hanimetv",
+  title: `Watch Free Hentai Video Streams Online in 720p , 1080p HD - ${siteName}`,
   description: `Enjoy your unlimited hentai & anime
           collection. We are the definitive source for the best curated 720p /
           1080p HD hentai videos, viewable by mobile phone and tablet, for free.`,

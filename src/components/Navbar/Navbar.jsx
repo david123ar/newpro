@@ -97,9 +97,9 @@ export default function Navbar(props) {
               <Link href="/">
                 <div style={{ width: "auto", height: "40px" }}>
                   <div className="logo0">
-                    {siteName.includes("hen") ? (
+                    {siteName.includes("pro") ? (
                       <>
-                        {siteName.includes("hen") ? (
+                        {siteName.includes("pro") ? (
                           <>
                             hen<span className="col-cls">pro</span>
                           </>

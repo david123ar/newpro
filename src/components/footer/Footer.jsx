@@ -19,9 +19,9 @@ const Footer = () => {
           <div className="site-lines">
             <div className="line-head">
               Watch Hentai online at{" "}
-              {siteName.includes("hen") ? (
+              {siteName.includes("pro") ? (
                 <>
-                  {siteName.includes("hen") ? (
+                  {siteName.includes("pro") ? (
                     <>
                       hen<span className="col-imp">pro</span>
                     </>
@@ -39,7 +39,7 @@ const Footer = () => {
             </div>
             <div className="line-inn">
               In{" "}
-              {siteName.includes("hen") ? (
+              {siteName.includes("pro") ? (
                 <>
                   hen<span className="col-imp">pro</span>
                 </>
@@ -56,7 +56,7 @@ const Footer = () => {
             </div>
             <div className="line-inn">
               If you're looking for the latest Hentai videos of various genres,
-              {siteName.includes("hen") ? (
+              {siteName.includes("pro") ? (
                 <>
                   hen<span className="col-imp">pro</span>
                 </>
@@ -76,7 +76,7 @@ const Footer = () => {
             </div>
             <div className="line-inn">
               With{" "}
-              {siteName.includes("hen") ? (
+              {siteName.includes("pro") ? (
                 <>
                   hen<span className="col-imp">pro</span>
                 </>
@@ -115,7 +115,7 @@ const Footer = () => {
             </div>
             <div className="line-head">
               Join our hentai{" "}
-              {siteName.includes("hen") ? (
+              {siteName.includes("pro") ? (
                 <>
                   hen<span className="col-imp">pro</span>
                 </>
@@ -153,7 +153,7 @@ const Footer = () => {
             />
           </div>
           <div className="headi">
-            {siteName.includes("hen") ? (
+            {siteName.includes("pro") ? (
               <>
                 hen<span className="col-p">pro</span>
               </>

@@ -6,12 +6,17 @@ import Footer from "@/components/footer/Footer";
 import Link from "next/link";
 import "./watch.css";
 import { usePathname } from "next/navigation";
+import { backgroundToTheme, themeStyles } from "@/styles/themeStyles";
 
-export default function WatchPageClient({ data, datal }) {
+export default function WatchPageClient({ data, datal, design, user }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
   const [showAd, setShowAd] = useState(true);
   const pathname = usePathname();
+
+  const designName = design?.split("/").pop()?.split(".")[0]; // "done" from "/done.jpg"
+  const themeKey = backgroundToTheme[designName] || "redWhiteBlack";
+  const theme = themeStyles[themeKey];
 
   useEffect(() => {
     // Show ad every time page changes

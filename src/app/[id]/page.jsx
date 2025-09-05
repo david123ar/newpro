@@ -22,11 +22,30 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default async function Page({ params }) {
+export default async function Page({ params, searchParams }) {
   let imageURL = "";
   let data = {};
   let datal = [];
   const id = "/" + params.id + "/";
+  const searchParam = await searchParams;
+  const username = searchParam?.ref || "testing";
+
+  /** Get user */
+  const userDoc = await db.collection("users").findOne({ username });
+  const user = userDoc
+    ? {
+        id: userDoc._id.toString(),
+        email: userDoc.email,
+        username: userDoc.username,
+        avatar: userDoc.avatar,
+        bio: userDoc.bio || "",
+        referredBy: userDoc.referredBy || null,
+      }
+    : null;
+
+  const linksDoc = await db.collection("links").findOne({ _id: username });
+  const links = linksDoc?.links || [];
+  const design = linksDoc?.design || "";
 
   try {
     const db = await connectDB();
@@ -53,5 +72,7 @@ export default async function Page({ params }) {
     console.error("Error fetching API:", err);
   }
 
-  return <WatchPageClient data={data} datal={apiData} />;
+  return (
+    <WatchPageClient data={data} datal={apiData} user={user} design={design} />
+  );
 }

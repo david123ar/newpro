@@ -13,7 +13,7 @@ export default async function Page({ searchParams }) {
   const db = await connectDB();
   const searchParam = await searchParams
   const username = searchParam?.ref || "testing";
-
+ 
   /** Get user */
   const userDoc = await db.collection("users").findOne({ username });
   const user = userDoc

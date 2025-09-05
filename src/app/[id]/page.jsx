@@ -27,6 +27,7 @@ export default async function Page({ params, searchParams }) {
   let data = {};
   let datal = [];
   const id = "/" + params.id + "/";
+  const db = await connectDB();
   const searchParam = await searchParams;
   const username = searchParam?.ref || "testing";
 

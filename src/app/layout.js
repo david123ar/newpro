@@ -37,16 +37,9 @@ export default function RootLayout({ children }) {
           `,
           }}
         />
-        {/* container required by the ad script */}
-        <div id="container-917495758f35e40004f3af3fe8c04eb8"></div>
-
-        {/* load external ad script via Next.js Script component */}
         <Script
-          id="adsterra-917495758f35e40004f3af3fe8c04eb8"
-          src="//decencytopmost.com/917495758f35e40004f3af3fe8c04eb8/invoke.js"
+          src="//decencytopmost.com/ea/1c/79/ea1c798183baca79e1812cf43c17e87e.js"
           strategy="afterInteractive"
-          data-cfasync="false"
-          async={true}
         />
       </head>
       <body className={inter.className}>

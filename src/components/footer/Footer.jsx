@@ -153,7 +153,15 @@ const Footer = () => {
             />
           </div>
           <div className="headi">
-            hen<span className="col-p">pro</span>
+            {siteName.includes("hen") ? (
+              <>
+                hen<span className="col-p">pro</span>
+              </>
+            ) : (
+              <>
+                hanime<span className="col-p">tv</span>
+              </>
+            )}
             <div className="copyright-text">
               <p>
                 {siteName} does not store any files on our server; we only link

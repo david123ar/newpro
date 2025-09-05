@@ -42,21 +42,28 @@ export default function WatchPageClient({ data, datal }) {
               This ad supports <strong>Henpro</strong>
             </div>
 
-            {/* Ad Script 1 */}
-            <script
-              async
-              data-cfasync="false"
-              src="//processestheycod.com/0a9b41bf6540401a759c03802d78f347/invoke.js"
-            ></script>
-            <div id="container-0a9b41bf6540401a759c03802d78f347" />
-
-            {/* Ad Script 2 */}
-            <script
-              async
-              data-cfasync="false"
-              src="//processestheycod.com/33a497c32aa8ecfffc3d4653d57e37f4/invoke.js"
-            ></script>
-            <div id="container-33a497c32aa8ecfffc3d4653d57e37f4" />
+            <div
+              className="bio-ad ad-bottom"
+              style={{
+                background: theme?.adBg,
+                boxShadow: theme?.adShadow,
+              }}
+            >
+              <iframe
+                src={`/ad2?theme=${design}`}
+                title="Bottom Ad"
+                scrolling="no"
+                style={{ width: "100%", height: "90px", border: "none" }}
+              />
+              {user?.referredBy && (
+                <iframe
+                  src={`/ad2?user=${user?.referredBy}&theme=${design}`}
+                  title="Ref Ad"
+                  scrolling="no"
+                  style={{ width: "100%", height: "90px", border: "none" }}
+                />
+              )}
+            </div>
           </div>
         </div>
       )}

@@ -37,10 +37,6 @@ export default function RootLayout({ children }) {
           `,
           }}
         />
-        <Script
-          src="//decencytopmost.com/ea/1c/79/ea1c798183baca79e1812cf43c17e87e.js"
-          strategy="afterInteractive"
-        />
       </head>
       <body className={inter.className}>
         <Nav>{children}</Nav>

@@ -48,12 +48,12 @@ export default function Nav({ children }) {
       {children}
 
       {/* Only show script if not on /ad or /ad2 */}
-      {pathname !== "/ad" && pathname !== "/ad2" && (
+      {/* {pathname !== "/ad" && pathname !== "/ad2" && (
         <Script
           src="//decencytopmost.com/ea/1c/79/ea1c798183baca79e1812cf43c17e87e.js"
           strategy="afterInteractive"
         />
-      )}
+      )} */}
 
       {/* <Footer /> */}
     </div>

@@ -7,8 +7,8 @@ export default function Advertize() {
   const [showAd, setShowAd] = useState(false);
 
   // ✅ Single ad link
-  const adLink =
-    "https://decencytopmost.com/ukqgqrv4n?key=acf2a1b713094b78ec1cc21761e9b149";
+  const adLink = "https://www.revenuecpmgate.com/d3j8c16q?key=c843c816558b4282950c88ec718cf1ea"
+    // "https://decencytopmost.com/ukqgqrv4n?key=acf2a1b713094b78ec1cc21761e9b149";
 
   const ls = typeof window !== "undefined" ? localStorage : null;
 
